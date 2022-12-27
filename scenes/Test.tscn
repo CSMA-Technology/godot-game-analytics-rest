@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Test.gd" type="Script" id=1]
+
+[node name="Test" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+columns = 2
+
+[node name="GameKeyInput" type="LineEdit" parent="GridContainer"]
+margin_right = 107.0
+margin_bottom = 24.0
+placeholder_text = "Game Key"
+
+[node name="SecretKeyInput" type="LineEdit" parent="GridContainer"]
+margin_left = 111.0
+margin_right = 218.0
+margin_bottom = 24.0
+placeholder_text = "Secret Key"
+
+[node name="InitBtn" type="Button" parent="GridContainer"]
+margin_top = 28.0
+margin_right = 107.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 100, 50 )
+text = "Initialize"
+
+[node name="DesignEvent1Btn" type="Button" parent="GridContainer"]
+margin_left = 111.0
+margin_top = 28.0
+margin_right = 218.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 100, 50 )
+text = "Design Event 1"
+
+[node name="DesignEvent2Btn" type="Button" parent="GridContainer"]
+margin_top = 82.0
+margin_right = 107.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 100, 50 )
+text = "Design Event 2"
+
+[node name="PublishBtn" type="Button" parent="GridContainer"]
+margin_left = 111.0
+margin_top = 82.0
+margin_right = 218.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 100, 50 )
+text = "PublishEvents"
+
+[node name="EndSessionBtn" type="Button" parent="GridContainer"]
+margin_top = 136.0
+margin_right = 107.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 100, 50 )
+text = "End Session"
+
+[node name="NewSceneBtn" type="Button" parent="GridContainer"]
+margin_left = 111.0
+margin_top = 136.0
+margin_right = 218.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 100, 50 )
+text = "New Scene"
+
+[connection signal="pressed" from="GridContainer/InitBtn" to="." method="_on_InitBtn_pressed"]
+[connection signal="pressed" from="GridContainer/DesignEvent1Btn" to="." method="_on_DesignEvent1Btn_pressed"]
+[connection signal="pressed" from="GridContainer/DesignEvent2Btn" to="." method="_on_DesignEvent2Btn_pressed"]
+[connection signal="pressed" from="GridContainer/PublishBtn" to="." method="_on_PublishBtn_pressed"]
+[connection signal="pressed" from="GridContainer/EndSessionBtn" to="." method="_on_EndSessionBtn_pressed"]
+[connection signal="pressed" from="GridContainer/NewSceneBtn" to="." method="_on_NewSceneBtn_pressed"]

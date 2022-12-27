@@ -1,0 +1,17 @@
+# Import cache
+.import/
+
+# Binaries
+bin/
+build/
+lib/
+
+# Recommended excludes from Godot docs
+*.translation
+export_presets.cfg
+.mono/
+
+# Mac
+**/.DS_Store
+
+Exports/
